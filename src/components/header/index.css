@@ -1,0 +1,99 @@
+/* COMPONENTE HEADER */
+#headerComponent {
+  position: sticky; /* se estiver usando */
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  padding: 0 1rem;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px gainsboro;
+  text-transform: uppercase;
+  font-family: var(--font-sn-pro);
+  user-select: none;
+  
+}
+
+/* DIV DO TÍTULO */
+.title_text_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+/* TÍTULO */
+.header_title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* EMOJI DO TÍTULO */
+.fa-face-laugh-beam {
+  font-size: 20px;
+  color: #333;
+}
+
+/* LISTA DE LINKS */
+.navbar_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  list-style: none;
+}
+
+/* LINK */
+.navbar_link {
+  position: relative;
+  display: inline-block;
+
+  padding: 0.5rem 0.5rem;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.navbar_link:hover,
+.navbar_link:focus {
+  transform: translateY(-2px);
+  color: #007bff;
+}
+
+/* LINHA ANIMADA EM BAIXO DO LINK */
+.navbar_link::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: 4px;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+
+/* MOSTRA A LINHA QUANDO TIVER O HOVER */
+.navbar_link:hover::after,
+.navbar_link:focus::after {
+  transform: scaleX(1);
+}

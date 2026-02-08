@@ -1,0 +1,119 @@
+/* SEÇÃO ABOUT ME (CONTAINER) */
+#about-me-section {
+  min-height: calc(100vh - var(--header-height));
+
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* CAIXA DE TEXTO DO ABOUT ME */
+.about-me-text-box {
+  max-width: 550px;
+  text-align: justify;
+  font-family: var(--font-sn-pro), sans-serif;
+}
+
+/* CONTAINER DAS TECNOLOGIAS */
+.technologies {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* CONTAINER DOS ÍCONES */
+.technologies_icons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ÍCONE INDIVIDUAL DE TECNOLOGIA */
+.technologies_icon {
+  position: relative;
+
+  padding: 0.5rem;
+  font-size: 3rem;
+  text-align: center;
+
+  color: #333;
+  transition:
+    transform 300ms ease,
+    color 300ms ease;
+}
+
+/* EFEITO DE HOVER NO ÍCONE */
+.technologies_icon:hover {
+  transform: translateY(-2px);
+  color: #007bff;
+}
+
+/* LINHA ANIMADA ABAIXO DO ÍCONE */
+.technologies_icon::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: 2px;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 300ms ease;
+}
+
+/* ATIVA A LINHA NO HOVER */
+.technologies_icon:hover::after {
+  transform: scaleX(1);
+}
+
+/* DIV DE IMAGEM */
+.border-animada {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  padding: 4px;
+  border-radius: 12px;
+}
+
+/* ANIMAÇÂO DE BORDA GIRANTE */
+.border-animada::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 100%;
+  background: conic-gradient(
+    from 0deg,
+    #007bff,
+    transparent 0%,
+    #007bff 100%,
+    transparent
+  );
+  animation: girar 4s linear infinite;
+}
+
+/* IMAGEM DA DIV COM A BORDA ANIMADA */
+.border-animada .about-me-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+  background: #000;
+  z-index: 1;
+}
+
+/* ANIMAÇÃO DE GIRAR*/
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
