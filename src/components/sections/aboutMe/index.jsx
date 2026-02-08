@@ -3,8 +3,8 @@ import "./index.css";
 export function AboutMeSection() {
   return (
     <>
-      <section className="content-section" id="about-me-section">
-        <div className="about-me-text-box">
+      <section className="content_section" id="about-me-section">
+        <div className="about_me_text_box">
           <h1>Um Pouco Sobre Mim:</h1>
           <br />
           <p>
@@ -35,9 +35,9 @@ export function AboutMeSection() {
             </div>
           </div>
         </div>
-        <div class="border-animada">
+        <div class="border_animada">
           <img
-            className="about-me-image"
+            className="about_me_image"
             src="../../../src/images/Fotoperfil.jpg"
             alt="Imagem de André Milani"
           />
