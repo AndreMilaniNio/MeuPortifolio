@@ -1,19 +1,86 @@
-import { Modal } from "../../modal";
-import { useState } from "react";
 import "./index.css";
+import projects from "../../../data/myProjectsData.json";
+import { useState } from "react";
 
 export function MyProjectsSection() {
-  const [modalOpen, setModalOpen] = useState(false);
+  // Constante de projetos para carregar
+  const PROJECTS_PER_LOAD = 3;
+  // Mostrar projetos visíveis
+  const [visibleProjects, setVisibleProjects] = useState(PROJECTS_PER_LOAD);
+
+  // Função para carregar mais projetos
+  function loadMoreProjects() {
+    setVisibleProjects((prev) => prev + PROJECTS_PER_LOAD);
+  }
+
+  // Função para remover projetos
+  function removeProjects() {
+    setVisibleProjects((prev) =>
+      Math.max(PROJECTS_PER_LOAD, prev - PROJECTS_PER_LOAD),
+    );
+  }
 
   return (
     <>
-      <section className="content-section" id="projects-section">
-        <div>
-          <button onClick={() => {setModalOpen(true)}}>
-            Abrir Modal
-          </button>
+      <section className="content_section" id="projects-section">
+        <h1 className="my_projects_main_title">MEUS PROJETOS</h1>
 
-          {modalOpen && <Modal fechar={() => setModalOpen(false)} />}
+        <div className="projects_grid">
+          {projects.slice(0, visibleProjects).map((project) => (
+            <div className="project_box" key={project.id}>
+              <h2 className="project_name">{project.name}</h2>
+
+              <p className="project_description">{project.description}</p>
+
+              <ul className="project_details">
+                <li>
+                  <p>
+                    <strong>Desenvolvedor:</strong> {project.developer}
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>Tecnologias utilizadas:</strong>{" "}
+                    {project.technologies.join(", ")}
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>Data:</strong> {project.date}
+                  </p>
+                </li>
+              </ul>
+
+              <a
+                href={project.repository}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="goto_repository">Ver Repositório</button>
+              </a>
+            </div>
+          ))}
+        </div>
+
+        <div className="load_more_container">
+          {/* Botão de carregar mais projetos */}
+          {visibleProjects < projects.length && (
+            <button className="load_more_button" onClick={loadMoreProjects}>
+              CARREGAR PROJETOS
+            </button>
+          )}
+          {/* Botão de retirar projetos */}
+          {visibleProjects > PROJECTS_PER_LOAD && (
+            <button
+              className="collapse_projects_button"
+              onClick={removeProjects}
+              aria-label="Mostrar menos projetos"
+            >
+              <i class="fa-solid fa-minus"></i>
+            </button>
+          )}
         </div>
       </section>
     </>

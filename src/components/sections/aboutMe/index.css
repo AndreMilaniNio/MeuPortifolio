@@ -4,6 +4,7 @@
 
   flex-direction: row;
   justify-content: space-evenly;
+  scroll-margin-top: 60px;
 }
 
 /* CAIXA DE TEXTO DO ABOUT ME */
