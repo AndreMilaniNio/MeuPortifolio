@@ -9,14 +9,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   padding: 0 1rem;
   background-color: #ffffff;
   box-shadow: 0px 4px 4px gainsboro;
   text-transform: uppercase;
   font-family: var(--font-sn-pro);
   user-select: none;
-  
 }
 
 /* DIV DO TÍTULO */
@@ -37,6 +36,25 @@
 .fa-face-laugh-beam {
   font-size: 20px;
   color: #333;
+}
+
+/* MENU HAMBÚRGUER */
+.menu_toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.menu_toggle span {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: 0.3s ease;
 }
 
 /* LISTA DE LINKS */
@@ -96,4 +114,84 @@
 .navbar_link:hover::after,
 .navbar_link:focus::after {
   transform: scaleX(1);
+}
+
+
+/** TELAS GRANDES (DESKTOP) */
+@media (min-width: 992px) {
+  .navbar_list {
+    display: flex;
+  }
+}
+
+
+/** TELAS MÉDIAS (TABLETS) */
+@media (max-width: 991px) {
+
+  #headerComponent {
+    padding: 0 1.5rem;
+  }
+
+  .navbar_list {
+    gap: 15px;
+  }
+
+  .header_title {
+    font-size: 1.3rem;
+  }
+}
+
+/** TELAS PEQUENAS (MOBILE) */
+@media (max-width: 768px) {
+
+  .menu_toggle {
+    display: flex;
+  }
+
+  .navbar_list {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - var(--header-height));
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+
+    transition: right 0.3s ease;
+  }
+
+  .navbar_list.active {
+    right: 0;
+  }
+
+  .navbar_link {
+    font-size: 16px;
+  }
+
+  .header_title {
+    font-size: 1.1rem;
+  }
+}
+
+/** TELAS MUITO PEQUENAS */
+@media (max-width: 480px) {
+
+  #headerComponent {
+    padding: 0 1rem;
+  }
+
+  .header_title {
+    font-size: 1rem;
+  }
+
+  .navbar_list {
+    width: 200px;
+  }
 }
