@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
 :root {
   --font-sn-pro: "SN Pro", sans-serif;
 
   /* Altura do header (uso em dois lugares, por isso tranformei em variável) */
   --header-height: 60px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {

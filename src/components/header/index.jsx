@@ -12,12 +12,12 @@ export function Header() {
         <nav>
           <ul className="navbar_list">
             <li className="navbar_item">
-              <a className="navbar_link" href="">
+              <a className="navbar_link" href="#about-me-section">
                 sobre Mim
               </a>
             </li>
             <li className="navbar_item">
-              <a className="navbar_link" href="">
+              <a className="navbar_link" href="#projects-section">
                 projetos
               </a>
             </li>
