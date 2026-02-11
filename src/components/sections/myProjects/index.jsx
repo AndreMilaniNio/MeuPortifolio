@@ -66,21 +66,22 @@ export function MyProjectsSection() {
 
         <div className="load_more_container">
           {/* Botão de carregar mais projetos */}
-          {visibleProjects < projects.length && (
-            <button className="load_more_button" onClick={loadMoreProjects}>
-              CARREGAR PROJETOS
-            </button>
-          )}
+          <button
+            className="load_more_button"
+            onClick={loadMoreProjects}
+            disabled={visibleProjects >= projects.length}
+          >
+            CARREGAR PROJETOS
+          </button>
           {/* Botão de retirar projetos */}
-          {visibleProjects > PROJECTS_PER_LOAD && (
-            <button
-              className="collapse_projects_button"
-              onClick={removeProjects}
-              aria-label="Mostrar menos projetos"
-            >
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          )}
+          <button
+            className="collapse_projects_button"
+            onClick={removeProjects}
+            aria-label="Mostrar menos projetos"
+            disabled={visibleProjects <= PROJECTS_PER_LOAD}
+          >
+            <i class="fa-solid fa-minus"></i>
+          </button>
         </div>
       </section>
     </>
