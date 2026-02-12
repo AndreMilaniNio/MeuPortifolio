@@ -1,42 +1,70 @@
+import { useState, useRef, useEffect } from "react";
 import "./index.css";
-import { useState } from "react";
 
 export function Header() {
-  // Menu hambúrguer
-  const [menuOpen, setMenuOpen] = useState(false);
+  // Variáveis para o menu hambúrguer
+  const [hambMenuOpen, setHambMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  // Fecha ao clicar fora
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    }
+
+    if (hambMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [hambMenuOpen]);
 
   return (
     <>
       <header id="headerComponent">
         <div className="title_text_div">
           <h1 className="header_title">Bem-vindo</h1>
-          <i class="fa-solid fa-face-laugh-beam"></i>
+          <i className="fa-solid fa-face-laugh-beam"></i>
         </div>
 
+        {/* Botão Hambúrguer */}
         <button
-          className={`menu_toggle ${menuOpen ? "open" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Abrir menu"
+          className={`hamburger ${hambMenuOpen ? "open" : ""}`}
+          onClick={() => setHambMenuOpen(!hambMenuOpen)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          ☰
         </button>
 
-        <nav>
-          <ul className={`navbar_list ${menuOpen ? "active" : ""}`}>
+        <nav ref={menuRef} className={`nav ${hambMenuOpen ? "active" : ""}`}>
+          <ul className="navbar_list">
             <li className="navbar_item">
-              <a className="navbar_link" href="#about-me-section">
+              <a
+                onClick={() => setHambMenuOpen(false)}
+                className="navbar_link"
+                href="#about-me-section"
+              >
                 sobre mim
               </a>
             </li>
             <li className="navbar_item">
-              <a className="navbar_link" href="#projects-section">
+              <a
+                onClick={() => setHambMenuOpen(false)}
+                className="navbar_link"
+                href="#projects-section"
+              >
                 projetos
               </a>
             </li>
             <li className="navbar_item">
-              <a className="navbar_link" href="#contact">
+              <a
+                onClick={() => setHambMenuOpen(false)}
+                className="navbar_link"
+                href="#contact"
+              >
                 contato
               </a>
             </li>

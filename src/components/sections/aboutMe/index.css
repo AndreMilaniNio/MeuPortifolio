@@ -2,6 +2,8 @@
 #about-me-section {
   min-height: calc(100vh - var(--header-height));
 
+  padding: 2rem 1rem;
+
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -11,6 +13,10 @@
 /* CAIXA DE TEXTO DO ABOUT ME */
 .about_me_text_box {
   max-width: 550px;
+
+  display: flex;
+  flex-direction: column;
+
   text-align: justify;
   font-family: var(--font-sn-pro), sans-serif;
   color: #333;
@@ -34,6 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 /* ÍCONE INDIVIDUAL DE TECNOLOGIA */
@@ -122,5 +129,49 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 576px) {
+  #about-me-section {
+    flex-direction: column-reverse;
+    gap: 2rem;
+
+    padding: 2rem 1rem;
+    scroll-margin-top: none;
+  }
+
+  /* CAIXA DE TEXTO DO ABOUT ME */
+  .about_me_text_box {
+    text-align: justify;
+    font-family: var(--font-sn-pro), sans-serif;
+    color: #333;
+  }
+
+  /* TÍTULO DA BOX ABOUT ME */
+  .about_me_title {
+    font-size: 1.35rem;
+    align-self: center;
+  }
+
+  /* TÍTULO DO CONTAINER DE TECNOLOGIAS */
+  .technologies_title {
+    font-size: 1.2rem;
+    align-self: center;
+  }
+
+  /* ÍCONE INDIVIDUAL DE TECNOLOGIA */
+  .technologies_icon {
+    position: relative;
+
+    padding: 0.25rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  /* DIV DA IMAGEM C/ BORDA ANIMADA */
+  .border_animada {
+    width: 200px;
+    height: 200px;
   }
 }

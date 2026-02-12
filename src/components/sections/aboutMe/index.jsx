@@ -5,7 +5,7 @@ export function AboutMeSection() {
     <>
       <section className="content_section" id="about-me-section">
         <div className="about_me_text_box">
-          <h1>UM POUCO SOBRE MIM:</h1>
+          <h1 className="about_me_title">UM POUCO SOBRE MIM</h1>
           <br />
           <p>
             Sou desenvolvedor Full Stack, formado como técnico em
@@ -23,7 +23,7 @@ export function AboutMeSection() {
           <br />
 
           <div className="technologies">
-            <h2 className="technologies_title">Tecnologias Que Utilizo:</h2>
+            <h2 className="technologies_title">TECNOLOGIAS QUE UTILIZO</h2>
             <div className="technologies_icons">
               <i className="technologies_icon fa-brands fa-square-js"></i>
               <i className="technologies_icon fa-brands fa-node-js"></i>

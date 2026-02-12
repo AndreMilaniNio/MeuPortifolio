@@ -39,22 +39,12 @@
 }
 
 /* MENU HAMBÚRGUER */
-.menu_toggle {
+.hamburger {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 20px;
-  background: none;
   border: none;
+  font-size: 28px;
+  background: none;
   cursor: pointer;
-}
-.menu_toggle span {
-  width: 100%;
-  height: 3px;
-  background-color: #333;
-  border-radius: 2px;
-  transition: 0.3s ease;
 }
 
 /* LISTA DE LINKS */
@@ -73,7 +63,7 @@
   position: relative;
   display: inline-block;
 
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
 
   font-size: 14px;
   font-weight: 500;
@@ -116,82 +106,86 @@
   transform: scaleX(1);
 }
 
-
-/** TELAS GRANDES (DESKTOP) */
-@media (min-width: 992px) {
-  .navbar_list {
+@media (max-width: 576px) {
+  /* DIV DO TÍTULO */
+  .title_text_div {
+    position: relative;
     display: flex;
-  }
-}
-
-
-/** TELAS MÉDIAS (TABLETS) */
-@media (max-width: 991px) {
-
-  #headerComponent {
-    padding: 0 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
   }
 
-  .navbar_list {
-    gap: 15px;
-  }
-
+  /* TÍTULO DO HEADER */
   .header_title {
-    font-size: 1.3rem;
-  }
-}
-
-/** TELAS PEQUENAS (MOBILE) */
-@media (max-width: 768px) {
-
-  .menu_toggle {
-    display: flex;
+    font-size: 1.25rem;
   }
 
-  .navbar_list {
-    position: fixed;
-    top: var(--header-height);
-    right: -100%;
-    width: 250px;
-    height: calc(100vh - var(--header-height));
-
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 30px;
-
-    padding: 2rem;
-    background-color: #ffffff;
-    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
-
-    transition: right 0.3s ease;
-  }
-
-  .navbar_list.active {
-    right: 0;
-  }
-
-  .navbar_link {
-    font-size: 16px;
-  }
-
-  .header_title {
-    font-size: 1.1rem;
-  }
-}
-
-/** TELAS MUITO PEQUENAS */
-@media (max-width: 480px) {
-
-  #headerComponent {
-    padding: 0 1rem;
-  }
-
-  .header_title {
+  /* EMOJI DO HEADER */
+  .fa-face-laugh-beam {
     font-size: 1rem;
   }
 
+  /* ÍCONE DO HAMBÚRGUER */
+  .hamburger {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* NAV HAMBRGUER ATIVA */
+  .nav {
+    width: 50%;
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    background: #fff;
+    box-shadow: 0px 4px 4px gainsboro;
+    border: 1px solid gainsboro;
+    border-top: none;
+
+    /* Estado inicial escondido */
+    pointer-events: none;
+    opacity: 0;
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* QUANDO A NAV ESTÁ ATIVA */
+  .nav.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* LISTA DE LINKS */
   .navbar_list {
-    width: 200px;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  /* LINK */
+  .navbar_link {
+    flex-direction: column;
+    padding: 0.25rem;
+    font-size: 14px;
+  }
+
+  /* MOSTRA A LINHA QUANDO TIVER O HOVER */
+  .navbar_link:hover::after,
+  .navbar_link:focus::after {
+    transform: scaleX(0);
+  }
+
+  /* REMOVE A ANIMAÇÃO QUANDO CLICA NO BOTÃO NO MOBILE */
+  .navbar_link:hover,
+  .navbar_link:focus,
+  .navbar_link:active {
+    transform: none;
+    color: #333;
   }
 }
