@@ -29,8 +29,9 @@ jobs:
         run: npm install
 
       # 4. Rodar testes antes do deploy. (Isso evita subir código quebrado)
-      - name: Rodar testes
-        run: npm test
+      #   - Precisa de script com as tarefas do test
+      # - name: Rodar testes
+      #   run: npm test
 
       # 5. Executa o script: Se seu projeto for React / Next / Vite, aqui ele gera a pasta dist ou .next.
       - name: Rodar build
