@@ -1,3 +1,4 @@
+import fotoDePerfil from "../../../assets/Fotoperfil.jpg"
 import "./index.css";
 
 export function AboutMeSection() {
@@ -38,7 +39,7 @@ export function AboutMeSection() {
         <div class="border_animada">
           <img
             className="about_me_image"
-            src="../../../src/images/Fotoperfil.jpg"
+            src={fotoDePerfil}
             alt="Imagem de André Milani"
           />
         </div>
