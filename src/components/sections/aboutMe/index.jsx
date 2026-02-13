@@ -5,7 +5,7 @@ export function AboutMeSection() {
     <>
       <section className="content_section" id="about-me-section">
         <div className="about_me_text_box">
-          <h1 className="about_me_title">UM POUCO SOBRE MIM</h1>
+          <h1 className="about_me_title"><strong>UM POUCO SOBRE MIM</strong></h1>
           <br />
           <p>
             Sou desenvolvedor Full Stack, formado como técnico em

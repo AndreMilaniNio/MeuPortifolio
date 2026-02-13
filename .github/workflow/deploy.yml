@@ -1,0 +1,47 @@
+name: Deploy Application
+
+on:
+  push:
+    branches:
+      # Branch principal
+      - master
+      # Branch de desenvolvimento
+      - development
+
+jobs:
+  build-and-deploy:
+    # O GitHub cria uma máquina virtual Linux temporária para rodar seu código.
+    runs-on: ubuntu-latest
+
+    steps: 
+      # 1. Isso baixa seu repositório para dentro da máquina virtual. Sem isso, o código nem existe na máquina.
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # 2. Instala Node 20 na máquina virtual. (Se não fizer isso o npm nem funciona)
+      - name: Configurar Node.Js
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 20
+
+      # 3. Instala tudo que está no package.json.
+      - name: Instalar dependências
+        run: npm install
+
+      # 4. Rodar testes antes do deploy. (Isso evita subir código quebrado)
+      - name: Rodar testes
+        run: npm test
+
+      # 5. Executa o script: Se seu projeto for React / Next / Vite, aqui ele gera a pasta dist ou .next.
+      - name: Rodar build
+        run: npm run build
+
+      # 6. Aqui é apenas um teste.
+      #   Para deploy real, você colocaria:
+      #   - Deploy para Vercel
+      #   - Deploy para Railway
+      #   - Deploy para VPS
+      #   - Deploy para Render
+      #   - Deploy para AWS
+      - name: Deploy (simulação)
+        run: echo "Deploy realizado com sucesso!"

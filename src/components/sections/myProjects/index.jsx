@@ -23,7 +23,7 @@ export function MyProjectsSection() {
   return (
     <>
       <section className="content_section" id="projects-section">
-        <h1 className="my_projects_main_title">MEUS PROJETOS</h1>
+        <h1 className="my_projects_main_title"><strong>MEUS PROJETOS</strong></h1>
 
         <div className="projects_grid">
           {projects.slice(0, visibleProjects).map((project) => (

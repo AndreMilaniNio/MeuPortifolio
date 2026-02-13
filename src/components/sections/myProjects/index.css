@@ -152,6 +152,11 @@
     grid-template-columns: 1fr;
   }
 
+  /* TÍTULO DA SEÇÃO */
+  .my_projects_main_title {
+    font-size: 1.35rem;
+  }
+
   /* BOX DOS PROJETOS */
   .project_box {
     position: relative;
@@ -169,5 +174,10 @@
     padding: 1.5rem 2rem;
     box-shadow: 0px 4px 8px gray;
     font-family: var(--font-sn-pro), sans-serif;
+  }
+
+  /* NOME DO PROJETO */
+  .project_name {
+    font-size: 1.2rem;
   }
 }
