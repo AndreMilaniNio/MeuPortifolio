@@ -4,7 +4,6 @@ main {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   background-color: #f5f7fa;
@@ -17,12 +16,9 @@ main {
 /* CSS DAS SEÇÕES */
 .content_section {
   width: 100%;
-  min-height: 100vh;
+  padding: 2rem 1rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-
-  padding: 0 1rem;
 }

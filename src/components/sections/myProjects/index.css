@@ -12,9 +12,9 @@
 /* GRID DOS PROJETOS */
 .projects_grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
-  flex-wrap: wrap;
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
 }
 
 /* TÍTULO DA SEÇÃO */
@@ -25,21 +25,17 @@
 
 /* BOX DOS PROJETOS */
 .project_box {
-  position: relative;
-  max-width: 400px;
+  width: 100%;
   min-height: 300px;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: justify;
   gap: 1rem;
 
-  background-color: #fff;
+  background: #fff;
   border-radius: 1rem;
-  padding: 1.5rem 2rem;
-  box-shadow: 0px 4px 8px gray;
-  font-family: var(--font-sn-pro), sans-serif;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px gray;
 }
 
 /* NOME DO PROJETO */
@@ -188,7 +184,8 @@
 
   /* DESCRIÇÃO E TÓPICOS IMPORTANTES DO PROJETO */
   /* DETALHES DO PROJETO */
-  .project_details, .project_description {
+  .project_details,
+  .project_description {
     font-size: 1.2rem;
   }
 }

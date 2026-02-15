@@ -1,13 +1,14 @@
 /* SEÇÃO ABOUT ME (CONTAINER) */
 #about-me-section {
   min-height: calc(100vh - var(--header-height));
-
   margin-top: var(--header-height);
   padding: 2rem 1rem;
 
-  flex-direction: row;
-  justify-content: space-evenly;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+
   scroll-margin-top: 60px;
 }
 
@@ -90,10 +91,10 @@
 /* DIV DE IMAGEM */
 .border_animada {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: min(400px, 90vw);
+  aspect-ratio: 1 / 1;
   padding: 4px;
-  border-radius: 12px;
+  border-radius: 50%;
 }
 
 /* ANIMAÇÂO DE BORDA GIRANTE */
@@ -149,19 +150,19 @@
     font-family: var(--font-sn-pro), sans-serif;
     color: #333;
   }
-  
+
   /* TÍTULO DA BOX ABOUT ME */
   .about_me_title {
     font-size: 2rem;
     align-self: center;
     text-align: center;
   }
-  
+
   /* PARÁGRAFOS DA BOX SOBRE MIM */
   .about_me_text_box p {
     font-size: 1.2rem;
   }
-  
+
   /* TÍTULO DO CONTAINER DE TECNOLOGIAS */
   .technologies_title {
     font-size: 1.5rem;
