@@ -37,7 +37,7 @@ export function AboutMeSection() {
             </div>
           </div>
         </div>
-        <div class="border_animada">
+        <div className="border_animada">
           <img
             className="about_me_image"
             src={fotoDePerfil}

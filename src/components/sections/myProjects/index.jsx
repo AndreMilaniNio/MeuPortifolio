@@ -83,7 +83,7 @@ export function MyProjectsSection() {
             aria-label="Mostrar menos projetos"
             disabled={visibleProjects <= PROJECTS_PER_LOAD}
           >
-            <i class="fa-solid fa-minus"></i>
+            <i className="fa-solid fa-minus"></i>
           </button>
         </div>
       </section>
