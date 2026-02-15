@@ -164,10 +164,20 @@
     padding: 1rem 0;
   }
 
+  /* ITEM DE LINK */
+  .navbar_item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   /* LINK */
   .navbar_link {
+    width: 100%;
+    text-align: center;
     flex-direction: column;
-    padding: 0.25rem;
+    padding: 0.5rem;
     font-size: 1rem;
   }
 
