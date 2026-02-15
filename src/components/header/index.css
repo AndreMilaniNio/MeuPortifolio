@@ -34,7 +34,7 @@
 
 /* EMOJI DO TÍTULO */
 .fa-face-laugh-beam {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #333;
 }
 
@@ -123,7 +123,7 @@
 
   /* EMOJI DO HEADER */
   .fa-face-laugh-beam {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   /* ÍCONE DO HAMBÚRGUER */
@@ -172,7 +172,7 @@
   .navbar_link {
     flex-direction: column;
     padding: 0.25rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   /* MOSTRA A LINHA QUANDO TIVER O HOVER */
