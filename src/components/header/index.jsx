@@ -5,18 +5,19 @@ export function Header() {
   // Variáveis para o menu hambúrguer
   const [hambMenuOpen, setHambMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const buttonRef = useRef(null);
 
   // Fecha ao clicar fora (Quando o menu abrir ou fechar, execute isso.)
   useEffect(() => {
-    // Esse bloco é a função que roda sempre que o usuário clica na tela.
     function handleClickOutside(event) {
-      // MenuRef.current → é o menu:
-      //    .contains(event.target) → verifica se o clique foi dentro
-      //    '!' → significa “não”
-      //    Se o clique NÃO foi dentro do menu → fecha.
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        // Se o clique NÃO foi dentro do menu → fecha.
-        setMenuOpen(false);
+      // Só fecha se o clique não for no menu E não for no botão.
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setHambMenuOpen(false);
       }
     }
 
@@ -44,10 +45,11 @@ export function Header() {
 
         {/* Botão Hambúrguer */}
         <button
+          ref={buttonRef}
           className={`hamburger ${hambMenuOpen ? "open" : ""}`}
-          onClick={() => setHambMenuOpen(!hambMenuOpen)}
+          onClick={() => setHambMenuOpen((prev) => !prev)}
         >
-          <i class="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars"></i>
         </button>
 
         <nav ref={menuRef} className={`nav ${hambMenuOpen ? "active" : ""}`}>

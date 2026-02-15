@@ -42,9 +42,9 @@
 .hamburger {
   display: none;
   border: none;
-  font-size: 28px;
   background: none;
   cursor: pointer;
+  padding: .25rem;
 }
 
 /* LISTA DE LINKS */
