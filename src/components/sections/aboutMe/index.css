@@ -143,24 +143,25 @@
 
   /* CAIXA DE TEXTO DO ABOUT ME */
   .about_me_text_box {
-    width: 90%;
+    width: 95%;
     text-align: justify;
     font-family: var(--font-sn-pro), sans-serif;
     color: #333;
   }
 
-  /* PARÁGRAFOS DA BOX SOBRE MIM */
-  .about_me_text_box p {
-    font-size: 1.2rem;
-  }
-
+  
   /* TÍTULO DA BOX ABOUT ME */
   .about_me_title {
     font-size: 2rem;
     align-self: center;
     text-align: center;
   }
-
+  
+  /* PARÁGRAFOS DA BOX SOBRE MIM */
+  .about_me_text_box p {
+    font-size: 1.2rem;
+  }
+  
   /* TÍTULO DO CONTAINER DE TECNOLOGIAS */
   .technologies_title {
     font-size: 1.5rem;

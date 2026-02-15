@@ -56,10 +56,11 @@
 
 /* BOTÃO DE IR PARA O REPOSITÓRIO */
 .goto_repository {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%);
+  margin-top: 1rem;
+
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
 
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0px 2px 6px gray;
@@ -67,12 +68,13 @@
   border: none;
   border-radius: 1rem;
   padding: 0.75rem;
+
   transition: 200ms ease-in-out;
   cursor: pointer;
 }
 .goto_repository:hover,
 .goto_repository:focus {
-  transform: translateX(-50%) translateY(-2px);
+  transform: translateY(-2px);
   background-color: gainsboro;
   box-shadow: 0px 2px 6px #333;
 }
@@ -88,6 +90,9 @@
 /* BOTÃO DE CARREGAR MAIS PROJETOS */
 .load_more_button {
   height: 40px;
+
+  font-family: var(--font-sn-pro);
+  font-weight: 500;
 
   background-color: #fff;
   box-shadow: 0px 2px 6px gray;
@@ -154,7 +159,7 @@
 
   /* TÍTULO DA SEÇÃO */
   .my_projects_main_title {
-    font-size: 1.35rem;
+    font-size: 2rem;
   }
 
   /* BOX DOS PROJETOS */
@@ -178,6 +183,12 @@
 
   /* NOME DO PROJETO */
   .project_name {
+    font-size: 1.5rem;
+  }
+
+  /* DESCRIÇÃO E TÓPICOS IMPORTANTES DO PROJETO */
+  /* DETALHES DO PROJETO */
+  .project_details, .project_description {
     font-size: 1.2rem;
   }
 }

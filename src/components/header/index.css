@@ -139,7 +139,7 @@
 
   /* NAV HAMBRGUER ATIVA */
   .nav {
-    width: 50%;
+    width: 100%;
     position: absolute;
     top: 100%;
     right: 0;
@@ -172,7 +172,7 @@
   .navbar_link {
     flex-direction: column;
     padding: 0.25rem;
-    font-size: 14px;
+    font-size: 1.2rem;
   }
 
   /* MOSTRA A LINHA QUANDO TIVER O HOVER */
