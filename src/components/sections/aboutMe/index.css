@@ -143,35 +143,44 @@
 
   /* CAIXA DE TEXTO DO ABOUT ME */
   .about_me_text_box {
+    width: 90%;
     text-align: justify;
     font-family: var(--font-sn-pro), sans-serif;
     color: #333;
   }
 
+  /* PARÁGRAFOS DA BOX SOBRE MIM */
+  .about_me_text_box p {
+    font-size: 1.2rem;
+  }
+
   /* TÍTULO DA BOX ABOUT ME */
   .about_me_title {
-    font-size: 1.35rem;
+    font-size: 2rem;
     align-self: center;
+    text-align: center;
   }
 
   /* TÍTULO DO CONTAINER DE TECNOLOGIAS */
   .technologies_title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     align-self: center;
+    text-align: center;
   }
 
   /* ÍCONE INDIVIDUAL DE TECNOLOGIA */
   .technologies_icon {
+    flex-wrap: wrap;
     position: relative;
 
-    padding: 0.25rem;
-    font-size: 1.8rem;
-    text-align: center;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    text-align: justify;
   }
 
   /* DIV DA IMAGEM C/ BORDA ANIMADA */
   .border_animada {
-    width: 200px;
-    height: 200px;
+    width: 270px;
+    height: 270px;
   }
 }

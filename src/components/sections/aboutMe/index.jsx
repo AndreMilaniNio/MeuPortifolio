@@ -1,3 +1,4 @@
+// Importação de imagem
 import fotoDePerfil from "../../../assets/Fotoperfil.jpg"
 import "./index.css";
 
