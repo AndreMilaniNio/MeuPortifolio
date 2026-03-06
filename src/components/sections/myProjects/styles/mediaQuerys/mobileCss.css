@@ -1,0 +1,38 @@
+@media (max-width: 576px) {
+
+  .projects_grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .my_projects_main_title {
+    font-size: 2rem;
+  }
+
+  .project_box {
+    position: relative;
+    justify-self: center;
+    max-width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    gap: 1rem;
+
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0px 4px 8px gray;
+    font-family: var(--font-sn-pro), sans-serif;
+  }
+
+  .project_name {
+    font-size: 1.5rem;
+  }
+
+  .project_details,
+  .project_description {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,27 @@
+#projects-section {
+  min-height: calc(100vh - var(--header-height));
+  position: relative;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  justify-content: flex-start;
+  gap: 2rem 0;
+  scroll-margin-top: 60px;
+}
+
+/* TÍTULO DA SEÇÃO */
+.my_projects_main_title {
+  font-family: var(--font-sn-pro), sans-serif;
+  color: #333;
+}
+
+/* GRID DOS PROJETOS */
+.projects_grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+
+  padding: 0 2rem;
+}

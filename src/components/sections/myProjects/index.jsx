@@ -1,6 +1,12 @@
-import "./index.css";
+// Importação de conteúdo do JSON
 import projects from "../../../data/myProjectsData.json";
+// Importação de itens react
 import { useState } from "react";
+// Importação CSS
+import "./styles/myProjectsSection.css";
+import "./styles/projectsButtons.css";
+import "./styles/projectsCard.css";
+import "./styles/mediaQuerys/mobileCss.css";
 
 export function MyProjectsSection() {
   // Constante de projetos para carregar
@@ -15,9 +21,19 @@ export function MyProjectsSection() {
 
   // Função para remover projetos
   function removeProjects() {
-    setVisibleProjects((prev) =>
-      Math.max(PROJECTS_PER_LOAD, prev - PROJECTS_PER_LOAD),
-    );
+    const elements = document.querySelectorAll(".project_box");
+
+    elements.forEach((el, index) => {
+      if (index >= visibleProjects - PROJECTS_PER_LOAD) {
+        el.classList.add("removing");
+      }
+    });
+
+    setTimeout(() => {
+      setVisibleProjects((prev) =>
+        Math.max(PROJECTS_PER_LOAD, prev - PROJECTS_PER_LOAD),
+      );
+    }, 280);
   }
 
   return (
