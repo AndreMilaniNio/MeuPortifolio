@@ -1,0 +1,67 @@
+@media (max-width: 576px) {
+  /* CONTAINER PRINCIPAL DA SEÇÃO ABOUT */
+  #about-me-section {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  /* TEXTO DA SEÇÃO ABOUT */
+  .about_me_text_box {
+    width: 95%;
+    text-align: justify;
+    font-family: var(--font-sn-pro), sans-serif;
+    color: #333;
+  }
+
+  /* TÍTULO ABOUT */
+  .about_me_title {
+    font-size: 2rem;
+    align-self: center;
+    text-align: center;
+  }
+
+  /* PARÁGRAFOS DO ABOUT */
+  .about_me_text_box p {
+    font-size: 1.2rem;
+  }
+  
+  /* CONTAINER DAS TECNOLOGIAS */
+  .tech {
+    margin: 2rem 0rem;
+  }
+
+  /* TÍTULO */
+  .tech_title {
+    font-size: 1.5rem;
+    align-self: center;
+    text-align: center;
+  }
+
+  /* GRID MOBILE */
+  .tech_grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* CENTRALIZA ÚLTIMO ITEM */
+  .tech_grid :last-child {
+    grid-column: 2;
+  }
+
+  /* ÍCONE MOBILE */
+  .tech_icon {
+    font-size: 2.5rem;
+  }
+
+  /* TEXTO MOBILE */
+  .tech_name {
+    font-size: 0.8rem;
+  }
+
+  /* BORDA ANIMADA DA FOTO */
+  .border_animada {
+    width: 85%;
+    height: 85%;
+  }
+}

@@ -1,0 +1,9 @@
+@media (max-width: 1024px) {
+
+  #about-me-section {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    scroll-margin-top: none;
+  }
+}

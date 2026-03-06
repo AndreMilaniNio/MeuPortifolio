@@ -1,0 +1,47 @@
+/* COMPONENTE HEADER */
+#headerComponent {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+
+  height: var(--header-height);
+  padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #fff;
+  box-shadow: 0 4px 4px gainsboro;
+  text-transform: uppercase;
+  font-family: var(--font-sn-pro);
+}
+
+/* DIV DO TÍTULO */
+.title_text_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+/* TÍTULO */
+.header_title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* EMOJI DO TÍTULO */
+.fa-face-laugh-beam {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* MENU HAMBÚRGUER */
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}

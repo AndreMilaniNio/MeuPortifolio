@@ -1,0 +1,58 @@
+@media (max-width: 576px) {
+
+  .hamburger {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    z-index: 1001;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background: #fff;
+    box-shadow: 0 4px 4px gainsboro;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .nav.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar_list {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .navbar_item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar_link {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .navbar_link:hover::after {
+    transform: scaleX(0);
+  }
+
+  .navbar_link:hover,
+  .navbar_link:focus,
+  .navbar_link:active {
+    transform: none;
+    color: #333;
+  }
+}

@@ -1,0 +1,30 @@
+/* SEÇÃO ABOUT ME (CONTAINER) */
+#about-me-section {
+  min-height: calc(100vh - var(--header-height));
+  margin-top: var(--header-height);
+  padding: 2rem 1rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+
+  scroll-margin-top: 60px;
+}
+
+/* CAIXA DE TEXTO DO ABOUT ME */
+.about_me_text_box {
+  max-width: 550px;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: justify;
+  font-family: var(--font-sn-pro), sans-serif;
+  color: #333;
+}
+
+.about_me_text_box p {
+  color: black;
+}

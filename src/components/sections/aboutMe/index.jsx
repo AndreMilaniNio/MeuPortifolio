@@ -1,13 +1,22 @@
 // Importação de imagem
-import fotoDePerfil from "../../../assets/Fotoperfil.jpg"
-import "./index.css";
+import fotoDePerfil from "../../../assets/Fotoperfil.jpg";
+// CSS's
+import "./styles/aboutMeSection.css";
+import "./styles/technologies.css";
+import "./styles/profileImage.css";
+import "./styles/animations.css";
+// Responsividade
+import "./styles/mediaQuerys/mobileCss.css";
+import "./styles/mediaQuerys/tabletCss.css";
 
 export function AboutMeSection() {
   return (
     <>
       <section className="content_section" id="about-me-section">
         <div className="about_me_text_box">
-          <h1 className="about_me_title"><strong>UM POUCO SOBRE MIM</strong></h1>
+          <h1 className="about_me_title">
+            <strong>UM POUCO SOBRE MIM</strong>
+          </h1>
           <br />
           <p>
             Sou desenvolvedor Full Stack, formado como técnico em
@@ -24,16 +33,45 @@ export function AboutMeSection() {
           </p>
           <br />
 
-          <div className="technologies">
-            <h2 className="technologies_title">TECNOLOGIAS QUE UTILIZO</h2>
-            <div className="technologies_icons">
-              <i className="technologies_icon fa-brands fa-square-js"></i>
-              <i className="technologies_icon fa-brands fa-node-js"></i>
-              <i className="technologies_icon fa-brands fa-git-alt"></i>
-              <i className="technologies_icon fa-brands fa-github"></i>
-              <i className="technologies_icon fa-brands fa-linux"></i>
-              <i className="technologies_icon fa-brands fa-html5"></i>
-              <i className="technologies_icon fa-brands fa-css3-alt"></i>
+          <div className="tech">
+            <h2 className="tech_title">TECNOLOGIAS QUE UTILIZO</h2>
+
+            {/* Grid que contém todas as tecnologias */}
+            <div className="tech_grid">
+              <div className="tech_item">
+                <i className="tech_icon fa-brands fa-square-js"></i>
+                <span className="tech_name">JavaScript</span>
+              </div>
+
+              <div className="tech_item">
+                <i className="tech_icon fa-brands fa-node-js"></i>
+                <span className="tech_name">Node.js</span>
+              </div>
+
+              <div className="tech_item">
+                <i className="tech_icon fa-brands fa-git-alt"></i>
+                <span className="tech_name">Git</span>
+              </div>
+
+              <div className="tech_item">
+                <i className="tech_icon fa-brands fa-github"></i>
+                <span className="tech_name">GitHub</span>
+              </div>
+
+              <div className="tech_item">
+                <i className="tech_icon fa-brands fa-linux"></i>
+                <span className="tech_name">Linux</span>
+              </div>
+
+              <div className="tech_item">
+                <i className="tech_icon fa-brands fa-html5"></i>
+                <span className="tech_name">HTML</span>
+              </div>
+
+              <div className="tech_item">
+                <i className="tech_icon fa-brands fa-css3-alt"></i>
+                <span className="tech_name">CSS</span>
+              </div>
             </div>
           </div>
         </div>

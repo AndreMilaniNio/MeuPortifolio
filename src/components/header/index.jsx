@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import "./index.css";
+import "./styles/header.css";
+import "./styles/navbar.css";
+import "./styles/mobileCss.css";
 
 export function Header() {
   // Variáveis para o menu hambúrguer
@@ -60,7 +62,7 @@ export function Header() {
                 className="navbar_link"
                 href="#about-me-section"
               >
-                sobre mim
+                início
               </a>
             </li>
             <li className="navbar_item">
