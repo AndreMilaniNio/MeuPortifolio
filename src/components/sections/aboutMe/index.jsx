@@ -8,6 +8,11 @@ import "./styles/animations.css";
 // Responsividade
 import "./styles/mediaQuerys/mobileCss.css";
 import "./styles/mediaQuerys/tabletCss.css";
+// Ícones
+import { BiLogoMongodb } from "react-icons/bi";
+import { TbBrandMysql } from "react-icons/tb";
+import { SiReact } from "react-icons/si";
+import { TbBrandWindows } from "react-icons/tb";
 
 export function AboutMeSection() {
   return (
@@ -39,6 +44,16 @@ export function AboutMeSection() {
             {/* Grid que contém todas as tecnologias */}
             <div className="tech_grid">
               <div className="tech_item">
+                <i className="tech_icon fa-brands fa-html5"></i>
+                <span className="tech_name">HTML</span>
+              </div>
+
+              <div className="tech_item">
+                <i className="tech_icon fa-brands fa-css3-alt"></i>
+                <span className="tech_name">CSS</span>
+              </div>
+
+              <div className="tech_item">
                 <i className="tech_icon fa-brands fa-square-js"></i>
                 <span className="tech_name">JavaScript</span>
               </div>
@@ -59,18 +74,28 @@ export function AboutMeSection() {
               </div>
 
               <div className="tech_item">
+                <BiLogoMongodb />
+                <span className="tech_name">MongoDB</span>
+              </div>
+
+              <div className="tech_item">
+                <TbBrandMysql />
+                <span className="tech_name">My SQL</span>
+              </div>
+
+              <div className="tech_item">
+                <SiReact />
+                <span className="tech_name">React</span>
+              </div>
+
+              <div className="tech_item">
                 <i className="tech_icon fa-brands fa-linux"></i>
                 <span className="tech_name">Linux</span>
               </div>
 
               <div className="tech_item">
-                <i className="tech_icon fa-brands fa-html5"></i>
-                <span className="tech_name">HTML</span>
-              </div>
-
-              <div className="tech_item">
-                <i className="tech_icon fa-brands fa-css3-alt"></i>
-                <span className="tech_name">CSS</span>
+                <TbBrandWindows />
+                <span className="tech_name">Windows</span>
               </div>
             </div>
           </div>

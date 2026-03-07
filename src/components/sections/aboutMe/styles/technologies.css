@@ -41,11 +41,19 @@
 .tech_name {
   font-size: 0.9rem;
   color: #333;
+  font-family: var(--font-sn-pro);
+  font-weight: 600;
+  text-align: center;
 }
 
 /* HOVER */
-.tech_item:hover {
+.tech_item:hover{
   transform: translateY(-2px);
+  color: #007bff;
+}
+
+/* MUDAR COR DO NOME NO HOVER */
+.tech_item:hover .tech_name {
   color: #007bff;
 }
 
