@@ -1,7 +1,7 @@
 /* BOTÃO DE IR PARA O REPOSITÓRIO */
 .goto_repository {
   width: clamp(160px, 40%, 250px);
-  margin-top: 1rem;
+  margin-top: auto;
 
   align-self: center;
   text-align: center;

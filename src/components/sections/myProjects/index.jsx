@@ -85,6 +85,7 @@ export function MyProjectsSection() {
 
         <div className="load_more_container">
           {/* Botão de carregar mais projetos */}
+          {visibleProjects < projects.length && (
           <button
             className="load_more_button"
             onClick={loadMoreProjects}
@@ -92,7 +93,10 @@ export function MyProjectsSection() {
           >
             CARREGAR PROJETOS
           </button>
+          )}
+
           {/* Botão de retirar projetos */}
+          {visibleProjects > PROJECTS_PER_LOAD && (
           <button
             className="collapse_projects_button"
             onClick={removeProjects}
@@ -101,6 +105,7 @@ export function MyProjectsSection() {
           >
             <i className="fa-solid fa-minus"></i>
           </button>
+          )}
         </div>
       </section>
     </>

@@ -39,7 +39,7 @@ export function AboutMeSection() {
           <br />
 
           <div className="tech">
-            <h2 className="tech_title">TECNOLOGIAS QUE UTILIZO</h2>
+            <h2 className="tech_title"><strong>TECNOLOGIAS QUE UTILIZO</strong></h2>
 
             {/* Grid que contém todas as tecnologias */}
             <div className="tech_grid">
@@ -91,11 +91,6 @@ export function AboutMeSection() {
               <div className="tech_item">
                 <i className="tech_icon fa-brands fa-linux"></i>
                 <span className="tech_name">Linux</span>
-              </div>
-
-              <div className="tech_item">
-                <TbBrandWindows />
-                <span className="tech_name">Windows</span>
               </div>
             </div>
           </div>

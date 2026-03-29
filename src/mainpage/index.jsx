@@ -1,6 +1,7 @@
 import { Header } from "../components/header";
 import { MyProjectsSection } from "../components/sections/myProjects";
 import { AboutMeSection } from "../components/sections/aboutMe";
+import { ContactMeSection } from "../components/sections/contactMe"
 import "./index.css";
 
 export function Mainpage() {
@@ -10,6 +11,7 @@ export function Mainpage() {
       <main>
         <AboutMeSection/>
         <MyProjectsSection/>
+        <ContactMeSection/>
       </main>
     </>
   );

@@ -1,38 +1,29 @@
 [
   {
     "id": 1,
-    "name": "Projeto Tal",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "name": "Meu Portifólio",
+    "description": "Portifólio pessoal feito com Javascript, HTML, CSS e React, com uso do framework Vite",
     "developer": "André Milani",
-    "technologies": ["React", "NodeJS", "HTML", "CSS", "JavaScript"],
+    "technologies": ["React", "HTML", "CSS", "JavaScript"],
     "date": "2026",
-    "repository": "https://github.com/seu-repo"
+    "repository": "https://github.com/AndreMilaniNio/MeuPortifolio"
   },
   {
     "id": 2,
-    "name": "Projeto Tal",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "name": "Projeto Japão - Feira Das Nações",
+    "description": "Projeto desenvolvido em React para uma Feira das Nações com o tema Japão, apresentando informações sobre a cultura japonesa.",
     "developer": "André Milani",
-    "technologies": ["React", "NodeJS", "HTML", "CSS", "JavaScript"],
-    "date": "2026",
-    "repository": "https://github.com/seu-repo"
+    "technologies": ["React", "HTML", "CSS", "JavaScript"],
+    "date": "2025",
+    "repository": "https://github.com/AndreMilaniNio/Projeto-Japao-FDN"
   },
   {
     "id": 3,
-    "name": "Projeto Tal",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "name": "Registro e Login de Usuários - Local",
+    "description": "Este código implementa um sistema simples de registro e login de usuários utilizando o localStorage para armazenar dados no navegador.",
     "developer": "André Milani",
-    "technologies": ["React", "NodeJS", "HTML", "CSS", "JavaScript"],
-    "date": "2026",
-    "repository": "https://github.com/seu-repo"
-  },
-  {
-    "id": 4,
-    "name": "Projeto Tal",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    "developer": "André Milani",
-    "technologies": ["React", "NodeJS", "HTML", "CSS", "JavaScript"],
-    "date": "2026",
-    "repository": "https://github.com/seu-repo"
+    "technologies": ["HTML", "CSS", "JavaScript", "Node.js"],
+    "date": "2025",
+    "repository": "https://github.com/AndreMilaniNio/Projeto-RegistroeLoginJS/tree/main/SistemaDeLogin"
   }
 ]

@@ -78,7 +78,7 @@ export function Header() {
               <a
                 onClick={() => setHambMenuOpen(false)}
                 className="navbar_link"
-                href="#contact"
+                href="#contactme-section"
               >
                 contato
               </a>
